@@ -1,0 +1,60 @@
+---
+title: "Exploratory Data Analysis"
+author: "Naraa"
+format: 
+    html:
+        embed-resources: true
+---
+
+## Load Package
+```{python}
+import pandas as pd
+```
+
+## Load dataset from smoker.csv file
+
+```{python}
+df = pd.read_csv('smoker.csv')
+```
+
+## Check dimension
+
+```{python}
+df.shape
+```
+
+## Check detail of dataset (cols, rows, types etc.)
+
+```{python}
+df.info()
+```
+
+## Check first rows
+
+```{python}
+df.head()
+```
+
+## Check last rows
+
+```{python}
+df.tail()
+```
+
+## Calculate sum of treatment column 
+
+```{python}
+df.sum()
+```
+
+## Create a descriptive statistics
+
+```{python}
+df.describe()
+```
+
+## Count of unique values in outcome 
+
+```{python}
+df.value_counts()
+```
