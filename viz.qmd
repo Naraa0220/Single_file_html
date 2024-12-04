@@ -17,11 +17,13 @@ df
 
 ## Histogram
 
+### Single variable
+
 ```{python}
 df['smoker'].hist()
 ```
 
-## All Variables
+### All Variables
 
 ```{python}
 df.hist();
@@ -36,19 +38,20 @@ df
 ```
 
 ## Line Chart
-One Variable
+
+### One Variable
 
 ```{python}
 df['Age'].plot()
 ```
 
-## All Variables
+### All Variables
 
 ```{python}
 df.plot();
 ```
 
-## All Variables, log scale for y axis
+### All Variables, log scale for y axis
 
 ```{python}
 df.plot(logy = True)
@@ -68,7 +71,7 @@ Method 2
 df.plot.scatter(x = 'Income', y = 'Age')
 ```
 
-## All Variables
+### All Variables
 Dataset
 
 ```{python}
