@@ -1,0 +1,82 @@
+---
+title: "Visualization"
+author: "Naraa"
+toc: true
+echo: true
+format: 
+    html:
+        embed-resources: true
+---
+
+## Data Loading
+```{python}
+import pandas as pd
+df = pd.read_csv('smoker.csv')
+df
+```
+
+## Histogram
+
+```{python}
+df['smoker'].hist()
+```
+
+## All Variables
+
+```{python}
+df.hist();
+```
+
+## Data Loading
+
+```{python}
+import pandas as pd
+df = pd.read_csv('customer_data.csv')
+df
+```
+
+## Line Chart
+One Variable
+
+```{python}
+df['Age'].plot()
+```
+
+## All Variables
+
+```{python}
+df.plot();
+```
+
+## All Variables, log scale for y axis
+
+```{python}
+df.plot(logy = True)
+```
+
+## Scatter plot
+Two Variables
+Method 1
+
+```{python}
+df.plot(kind='scatter', x = 'Income', y = 'Age')
+```
+
+Method 2
+
+```{python}
+df.plot.scatter(x = 'Income', y = 'Age')
+```
+
+## All Variables
+Dataset
+
+```{python}
+import seaborn as sns
+df = sns.load_dataset("iris") 
+df
+```
+
+```{python}
+sns.pairplot(df, hue = 'species');
+```
